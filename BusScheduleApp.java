@@ -7,7 +7,14 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.net.*;
-
+/************************************************************************
+ * @author Joshua														*
+ * This is the main application class for a program which				*
+ * finds and lists the potential destinations using						*
+ * https://www.communitytransit.org/busservice/schedules/				*
+ * Will accept a character, then an integer representing a bus line.	*
+ * The bus line does not need to be one shown to the user to be valid.	*
+ ***********************************************************************/
 public class BusScheduleApp {
 
 	public static void main(String[] args) throws Exception {
@@ -29,11 +36,12 @@ public class BusScheduleApp {
 			System.out.println("There are no destinations that begin with that letter");
 		}
 		
-		System.out.println("Which route would you like to view?");
+		System.out.println("\nWhich route would you like to view?");
 		entry = sysin.next();
 		
 		if(rf.subConnection(entry)) {
-			System.out.println("Success! Probably");
+			rf.routeDetails(entry);
+			//System.out.println("Success! Probably");
 		}else {
 			System.out.println("Invalid");
 		}

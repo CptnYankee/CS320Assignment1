@@ -2,6 +2,11 @@ package assignmentOne;
 
 import java.util.ArrayList;
 
+/********************************************************************
+ * @author Joshua Standerfer										* 
+ * This class contains a destination as well as a					*
+ * list of lines which go to the destination. Merely a container	*
+ *******************************************************************/
 public class BusRoute implements Comparable<BusRoute> {
 	String destination;
 	ArrayList<String> routeID; //This is a number like 111, 412, or 201/202
@@ -50,7 +55,7 @@ public class BusRoute implements Comparable<BusRoute> {
 		for(int i = 0; i < temp.length; i++) {
 			sOut +="\n" + temp[i];
 		}
-		sOut += "\n+++++++++++++++";
+		sOut += "\n";
 		return sOut;
 	}
 }
